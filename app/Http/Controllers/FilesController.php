@@ -44,15 +44,17 @@ class FilesController extends Controller
 
         $file  = $request->file('file_name');
 
-        //dd(get_class_methods($file));
+
+
+        dd(get_class_methods($file));
 
         //dd($file->guessExtension());
 
-        $audioFileName = time() . '.' . $file->getClientOriginalExtension();
+        // $audioFileName = time() . '.' . $file->getClientOriginalExtension();
 
-        $this->s3->put($audioFileName, file_get_contents($file));
+        // $this->s3->put($audioFileName, file_get_contents($file));
 
-        echo "Upload Successfully";
+        //echo "Upload Successfully";
 
         //$directory = 'old';
         //$files = Storage::disk('s3')->files($directory);
