@@ -39,7 +39,7 @@ class FilesController extends Controller
     public function uploadAudioToS3(Request $request)
     {
         $this->validate($request, [
-            'file_name' => 'required|between:1,10240|mimes:mpga,octet-stream,application/octet-stream,audio/mpeg,audio/mp3,audio/mpeg3,mpeg,mp3,mpeg3',
+            'file_name' => 'required|between:1,10240|mimes:mpga,octet-stream,application/octet-stream,audio/mpeg,audio/mp3,audio/mpeg3,mpeg,mp3,mpeg3'
         ]);
 
         $file  = $request->file('file_name');

@@ -9,7 +9,7 @@
             <h3>Manage Your Audio Files Here</h3>
         </div>
 
-        <form role="form" method="POST" action="{{ url('/upload') }}"  enctype="multipart/form-data" class="form-horizontal">
+        <form role="form" method="POST" action="{{ action('FilesController@uploadAudioToS3') }}"  enctype="multipart/form-data" class="form-horizontal">
 
             <div class="form-group{{ $errors->has('file_name') ? ' has-error' : '' }}">
                 <label for="gravatar" class="col-sm-2 control-label"></label>
