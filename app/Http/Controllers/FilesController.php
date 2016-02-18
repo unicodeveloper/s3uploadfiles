@@ -52,10 +52,12 @@ class FilesController extends Controller
 
         $this->s3->put($audioFileName, file_get_contents($file));
 
+        echo "Upload Successfully";
+
         //$directory = 'old';
         //$files = Storage::disk('s3')->files($directory);
         //dd($files);
 
-        return redirect()->back()->with('info', 'Your Audio File has been updated Successfully');
+        //return redirect()->back()->with('info', 'Your Audio File has been updated Successfully');
     }
 }
