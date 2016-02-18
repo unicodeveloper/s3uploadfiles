@@ -50,9 +50,7 @@ class FilesController extends Controller
 
         $audioFileName = time() . '.' . $file->getClientOriginalExtension();
 
-        //$s3 = Storage::disk('s3');
-        //$filePath = '/support-tickets/' . $audioFileName;
-        //$this->s3->put($audioFileName, file_get_contents($file));
+        $this->s3->put($audioFileName, file_get_contents($file));
 
         echo "Upload successful";
 
@@ -60,6 +58,6 @@ class FilesController extends Controller
         //$files = Storage::disk('s3')->files($directory);
         //dd($files);
 
-        //return redirect()->back()->with('info', 'Your Avatar has been updated Successfully');
+        return redirect()->back()->with('info', 'Your Audio File has been updated Successfully');
     }
 }
