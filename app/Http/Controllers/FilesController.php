@@ -52,8 +52,6 @@ class FilesController extends Controller
 
         $this->s3->put($audioFileName, file_get_contents($file));
 
-        echo "Upload successful";
-
         //$directory = 'old';
         //$files = Storage::disk('s3')->files($directory);
         //dd($files);
