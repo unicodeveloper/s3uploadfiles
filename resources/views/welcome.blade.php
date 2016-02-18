@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Proof Of Concept App</div>
+                <div class="title">Proof Of Concept - Uploading Files to S3 using Heroku Free Tier</div>
             </div>
         </div>
     </body>
